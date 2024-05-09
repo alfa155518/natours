@@ -29,7 +29,7 @@ const uploadTourImages = upload.fields([
 // upload.array('images', 5) req.files
 
 const resizeTourImages = catchAsync(async (req, res, next) => {
-  console.log(req.files);
+  // console.log(req.files);
   if (!req.files.imageCover || !req.files.images) return next();
 
   // 1) Cover image
@@ -54,7 +54,7 @@ const resizeTourImages = catchAsync(async (req, res, next) => {
       req.body.images.push(filename);
     })
   );
-  console.log(req.body);
+  // console.log(req.body);
   next();
 });
 // GET ALL TOURS FUNCTION
